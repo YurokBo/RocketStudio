@@ -1,5 +1,5 @@
 # RocketStudio
 
- https://yurokboE.github.io/RocketStudio/
+https://yurokbo.github.io/RocketStudio/
 
 
