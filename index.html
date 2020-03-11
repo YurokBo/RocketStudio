@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--Plugin CSS file with desired skin-->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
+    <title>Mortgage Calculator</title>
+
+    <link rel="stylesheet" href="app/main.css">
+</head>
+<body>
+
+<div class="banks-wrapper">
+
+    <div class="container-fluid no-gutters">
+        <div class="content-wrapper">
+
+            <div class="calc-wrapper">
+
+                <div class="calculator">
+                    <div class="row calculator__wrapper">
+
+                        <div class="col-lg-3 calculator__title-wrapper">
+                            Параметры кредитования
+                        </div>
+
+                        <div class="col-lg-3 input__wrapper">
+                            <div class="calculator__flat-cost">
+                                <form>
+                                    <div class="form-group">
+                                        <div class="form-group__title"> Стоимость квартиры, руб:</div>
+                                        <div class="extra-controls">
+                                            <input type="text" class="js-input__flat-cost" value="3800000"/>
+                                        </div>
+                                        <div class="range-slider">
+                                            <input type="range" class="js-range-slider__flat-cost "
+                                                   value=""/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 input__wrapper">
+                            <div class="calculator__first-pay">
+                                <form>
+                                    <div class="form-group">
+                                        <div class="form-group__title"> Первоначальный взнос, руб:</div>
+                                        <div class="extra-controls">
+                                            <input type="text" class="js-input-first-pay" value="760000"/>
+                                        </div>
+                                        <div class="range-slider">
+                                            <input type="range" class="js-range-slider-first-pay"
+                                                   value=""/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 input__wrapper">
+                            <div class="calculator__period-years">
+                                <form>
+                                    <div class="form-group">
+                                        <div class="form-group__title"> Срок, лет:</div>
+                                        <div class="extra-controls">
+                                            <input type="text" class="js-input-period" value="7"/>
+                                        </div>
+                                        <div class="range-slider">
+                                            <input type="range" class="js-range-slider-period "
+                                                   value=""/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row no-gutters">
+                <div class="col-lg-4  ">
+                    <div class="mortgage-wrapper ">
+                        <div class="mortgage__info-wrapper sber">
+                            <div class="mortgage__info">
+                                <div class="mortgage__bank-info">
+                                    <div class="mortgage__bank-logo">
+                                        <img src="https://kp-varezhki2.ru/wp-content/uploads/sberbank-1.svg"
+                                             alt="bank_logo"
+                                             class="bank_logo">
+
+                                        <img src="app/img/1920px-Sberbank.svg.png"
+                                             alt="bank_logo"
+                                             class="bank_logo-mobile">
+                                    </div>
+                                </div>
+                                <div class="mortgage__rate-percent">
+                                    <div class="interest-rate">
+                                        ставка
+                                    </div>
+                                    <span>9.3</span>%
+                                </div>
+                            </div>
+
+                            <div class="row ">
+
+                                <div class="mortgage__payment-info">
+                                    <div class="col-lg-6 ">
+                                        <div class="mortgage-calculated-caption">
+                                            ежемесячный платеж:
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 ">
+                                        <div class="mortgage-calculated">
+                                            <span class="mortgage-calculated-amount" id="sber">29200
+                                            </span> &#8381
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4  ">
+                    <div class="mortgage-wrapper ">
+                        <div class="mortgage__info-wrapper vtb">
+                            <div class="mortgage__info">
+                                <div class="mortgage__bank-info">
+                                    <div class="mortgage__bank-logo">
+                                        <img src="https://kp-varezhki2.ru/wp-content/uploads/fill-2.svg"
+                                             alt="bank_logo"
+                                             class="bank_logo">
+
+                                        <img src="app/img/VTB_logo_2018.png"
+                                             alt="bank_logo"
+                                             class="bank_logo-mobile">
+                                    </div>
+                                </div>
+                                <div class="mortgage__rate-percent">
+                                    <div class="interest-rate">
+                                        ставка
+                                    </div>
+                                    <span>8.6</span>%
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="mortgage__payment-info">
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated-caption">
+                                            ежемесячный платеж:
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated">
+                                            <span class="mortgage-calculated-amount" id="vtb">36100</span> &#8381
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4  ">
+                    <div class="mortgage-wrapper ">
+                        <div class="mortgage__info-wrapper abb">
+                            <div class="mortgage__info">
+                                <div class="mortgage__bank-info">
+                                    <div class="mortgage__bank-logo">
+                                        <img src="https://kp-varezhki2.ru/wp-content/uploads/group-2329.svg"
+                                             alt="bank_logo"
+                                             class="bank_logo">
+
+                                        <img src="app/img/1024px-Ak_Bars_Bank_Logo.svg.png"
+                                             alt="bank_logo"
+                                             class="bank_logo-mobile">
+                                    </div>
+                                </div>
+                                <div class="mortgage__rate-percent">
+                                    <div class="interest-rate">
+                                        ставка
+                                    </div>
+                                    <span>7.99</span>%
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="mortgage__payment-info">
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated-caption">
+                                            ежемесячный платеж:
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated">
+                                            <span class="mortgage-calculated-amount" id="acb">35124</span> &#8381
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4  ">
+                    <div class="mortgage-wrapper ">
+                        <div class="mortgage__info-wrapper mcb">
+                            <div class="mortgage__info">
+                                <div class="mortgage__bank-info">
+                                    <div class="mortgage__bank-logo">
+                                        <img src="https://kp-varezhki2.ru/wp-content/uploads/logotip.svg"
+                                             alt="bank_logo"
+                                             class="bank_logo">
+
+                                        <img src="app/img/logo_МКБ.png"
+                                             alt="bank_logo"
+                                             class="bank_logo-mobile">
+                                    </div>
+                                </div>
+                                <div class="mortgage__rate-percent">
+                                    <div class="interest-rate">
+                                        ставка
+                                    </div>
+                                    <span>8.15</span>%
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="mortgage__payment-info">
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated-caption">
+                                            ежемесячный платеж:
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated">
+                                            <span class="mortgage-calculated-amount" id="mcb">35124</span> &#8381
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4  ">
+                    <div class="mortgage-wrapper ">
+                        <div class="mortgage__info-wrapper dom-rf">
+                            <div class="mortgage__info">
+                                <div class="mortgage__bank-info">
+                                    <div class="mortgage__bank-logo">
+                                        <img src="https://kp-varezhki2.ru/wp-content/uploads/group-2336.svg"
+                                             alt="bank_logo"
+                                             class="bank_logo">
+
+                                        <img src="app/img/Логотип_АО__АИЖК_.jpg"
+                                             alt="bank_logo"
+                                             class="bank_logo-mobile">
+                                    </div>
+                                </div>
+                                <div class="mortgage__rate-percent">
+                                    <div class="interest-rate">
+                                        ставка
+                                    </div>
+                                    <span>7.3</span>%
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="mortgage__payment-info">
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated-caption">
+                                            ежемесячный платеж:
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated">
+                                            <span class="mortgage-calculated-amount" id="domRf">35124</span> &#8381
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4  ">
+                    <div class="mortgage-wrapper ">
+                        <div class="mortgage__info-wrapper vb">
+                            <div class="mortgage__info">
+                                <div class="mortgage__bank-info">
+                                    <div class="mortgage__bank-logo">
+                                        <img src="https://kp-varezhki2.ru/wp-content/uploads/group-2335.svg"
+                                             alt="bank_logo"
+                                             class="bank_logo">
+
+                                        <img src="app/img/Логотип_Возрождение.svg.png"
+                                             alt="bank_logo"
+                                             class="bank_logo-mobile">
+                                    </div>
+                                </div>
+                                <div class="mortgage__rate-percent">
+                                    <div class="interest-rate">
+                                        ставка
+                                    </div>
+                                    <span>8.5</span>%
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="mortgage__payment-info">
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated-caption">
+                                            ежемесячный платеж:
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated">
+                                            <span class="mortgage-calculated-amount" id="vozBank">35124</span> &#8381
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4  ">
+                    <div class="mortgage-wrapper ">
+                        <div class="mortgage__info-wrapper rosselhoz">
+                            <div class="mortgage__info">
+                                <div class="mortgage__bank-info">
+                                    <div class="mortgage__bank-logo">
+                                        <img src="https://kp-varezhki2.ru/wp-content/uploads/group-2338.svg"
+                                             alt="bank_logo"
+                                             class="bank_logo">
+
+                                        <img src="app/img/rosselkhoz.png"
+                                             alt="bank_logo"
+                                             class="bank_logo-mobile">
+                                    </div>
+                                </div>
+                                <div class="mortgage__rate-percent">
+                                    <div class="interest-rate">
+                                        ставка
+                                    </div>
+                                    <span>10</span>%
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="mortgage__payment-info">
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated-caption">
+                                            ежемесячный платеж:
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated">
+                                            <span class="mortgage-calculated-amount" id="rossel">35124</span> &#8381
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4  ">
+                    <div class="mortgage-wrapper ">
+                        <div class="mortgage__info-wrapper psb">
+                            <div class="mortgage__info">
+                                <div class="mortgage__bank-info">
+                                    <div class="mortgage__bank-logo">
+                                        <img src="https://kp-varezhki2.ru/wp-content/uploads/group-2339.svg"
+                                             alt="bank_logo"
+                                             class="bank_logo">
+
+                                        <img src="app/img/Логотип_ПСБ.png"
+                                             alt="bank_logo"
+                                             class="bank_logo-mobile">
+                                    </div>
+                                </div>
+                                <div class="mortgage__rate-percent">
+                                    <div class="interest-rate">
+                                        ставка
+                                    </div>
+                                    <span>9.1</span>%
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="mortgage__payment-info">
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated-caption">
+                                            ежемесячный платеж:
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated">
+                                            <span class="mortgage-calculated-amount" id="psb">35124</span> &#8381
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4  ">
+                    <div class="mortgage-wrapper ">
+                        <div class="mortgage__info-wrapper tkb ">
+                            <div class="mortgage__info">
+                                <div class="mortgage__bank-info">
+                                    <div class="mortgage__bank-logo">
+                                        <img src="https://kp-varezhki2.ru/wp-content/uploads/group-2334.svg"
+                                             alt="bank_logo"
+                                             class="bank_logo">
+
+                                        <img src="app/img/Транскапиталбанк_Логотип.png"
+                                             alt="bank_logo"
+                                             class="bank_logo-mobile">
+                                    </div>
+                                </div>
+                                <div class="mortgage__rate-percent">
+                                    <div class="interest-rate">
+                                        ставка
+                                    </div>
+                                    <span>8.49</span>%
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="mortgage__payment-info">
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated-caption">
+                                            ежемесячный платеж:
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mortgage-calculated">
+                                            <span class="mortgage-calculated-amount" id="tcb">35124</span> &#8381
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="app/script.js"></script>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+.row-wrapper {
+    margin: 8px;
+}
+
+/*----------------cards styles-------------*/
+
+.mortgage__info-wrapper {
+
+    min-height: 13.6rem;
+    padding: 1.615rem 1.25rem 1.375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.mortgage__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mortgage__bank-info {
+    height: 100%;
+
+}
+
+.mortgage__bank-logo {
+    height: 100%;
+}
+
+.bank_logo {
+    /*height: 100%;*/
+    max-width: 100%;
+    border: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.bank_logo-mobile {
+    display: none;
+}
+
+.mortgage__rate-percent {
+    font-family: 'Bw Modelica Cyrillic Bold', sans-serif;
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, .54);
+    line-height: 2.5rem;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+
+/*.mortgage__payment-info-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}*/
+
+.mortgage__payment-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.mortgage-calculated-caption {
+    font-family: 'Bw Modelica Cyrillic Medium', sans-serif;
+    font-size: .875rem;
+    color: #fff;
+    text-align: right;
+    line-height: 1rem;
+}
+
+.mortgage-calculated-amount, .mortgage-calculated {
+    font-family: 'Bw Modelica Cyrillic Bold ', sans-serif;
+    font-size: 2.125rem;
+    color: #fff;
+    white-space: nowrap;
+    font-weight: bold;
+    /*margin-left: 1rem;*/
+}
+
+.mortgage__payment-info {
+    margin: 0 0 0 auto;
+    display: flex;
+    text-align: end;
+
+}
+
+.mortgage__payment-info .col-lg-6 {
+    margin: 0;
+}
+
+.mortgage-calculated-caption, .mortgage-calculated-caption {
+    margin-right: 0;
+}
+
+/*.sber, .vtb, .abb, .mcb, .dom-rf, .vb, .rosselhoz, .psb, .tkb {
+    margin: 8px;
+}*/
+.sber {
+
+    background-color: #00B858;
+
+    height: 172px;
+    margin: 0 8px 8px 0;
+
+}
+
+.vtb {
+    background-color: #00A0E2;
+
+    height: 172px;
+    margin: 0 8px 8px 8px;
+
+}
+
+.abb {
+    background-color: #009D20;
+
+    height: 172px;
+    margin: 0 0 8px 8px;
+
+}
+
+.mcb {
+    background-color: #DB002F;
+
+    height: 172px;
+    margin: 8px 8px 8px 0;
+}
+
+.dom-rf {
+    background-color: #10323C;
+
+    height: 172px;
+    margin: 8px 8px 8px 8px;
+}
+
+.vb {
+    background-color: #00447C;
+
+    height: 172px;
+    margin: 8px 0 8px 8px;
+}
+
+.rosselhoz {
+    background-color: #005F2D;
+
+    height: 172px;
+    margin: 8px 8px 0 0;
+}
+
+.psb {
+    background-color: #262887;
+
+    height: 172px;
+    margin: 8px 8px 0 8px;
+}
+
+.tkb {
+    background-color: #00ABAA;
+    height: 172px;
+    margin: 8px 0 0 8px;
+}
+
+.interest-rate, .from {
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .mortgage__bank-logo .bank_logo {
+        max-width: 9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .sber, .vtb, .abb, .mcb, .dom-rf, .vb, .rosselhoz, .psb, .tkb {
+        margin: 8px 0 8px 0 ;
+        padding: 1.915rem .85rem 1.375rem;
+        background: white!important;
+        box-shadow: 0 3px 6px rgba(0,0,0,.16);
+
+    }
+
+    .mortgage-calculated-caption {
+        color: #000;
+    }
+
+    .mortgage-calculated, .mortgage-calculated-amount  {
+
+        color: #000;
+
+    }
+
+    .mortgage__rate-percent {
+        font-size: 1.667rem;
+        line-height: 1.667rem;
+        color: #ABABAB;
+        margin: 0 0.5rem 0 0;
+    }
+
+    /* .bank_logo {
+         background-image: url("https://kp-varezhki2.ru/wp-content/uploads/sberbank-1.svg");
+     }*/
+    .mortgage__payment-info {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        margin: auto 0 0 0 ;
+
+    }
+    .mortgage__bank-logo {
+        max-width: 183px;
+        height: auto;
+    }
+    .bank_logo {
+        display: none;
+    }
+
+    .bank_logo-mobile {
+        display: flex;
+        height: auto;
+        max-width: 100%;
+        border: none;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        object-fit: contain;
+    }
+
+    .interest-rate {
+        display: block;
+
+        font-size: 0.8rem;
+        line-height: 0.555rem;
+        font-weight: normal;
+    }
+
+    .from {
+        display: flex;
+    }
+
+}
